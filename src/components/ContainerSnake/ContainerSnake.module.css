@@ -1,0 +1,7 @@
+.containerSnake {
+  background-color: black;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
