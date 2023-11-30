@@ -22,5 +22,5 @@ export default function useFood() {
     return null;
   };
 
-  return { food, foodPositionRandom };
+  return { food, foodPositionRandom, foodX, foodY };
 }
