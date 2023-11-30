@@ -1,5 +1,10 @@
 
 ## Snake Game
 
-Tipico juego de la vibora, todavia en desarrollo... 👨‍💻
+El clasico videojuego de la vibora, todavia en desarrollo... 👨‍💻
+
+### Tecnologias:
+
+
+ **`TypeScript`**  **`React.js`**
 
