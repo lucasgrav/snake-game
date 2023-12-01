@@ -29,16 +29,5 @@ export default function useSnake() {
     }
   };
 
-  const snake = () => {
-    return (
-      <div
-        style={{
-          gridArea: `${snakeY} / ${snakeX}`,
-          backgroundColor: "green",
-        }}
-      ></div>
-    );
-  };
-
-  return { snake, snakeMobility, moveSnake, snakeX, snakeY };
+  return { snakeMobility, moveSnake, snakeX, snakeY };
 }

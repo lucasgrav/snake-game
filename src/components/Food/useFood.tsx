@@ -11,16 +11,5 @@ export default function useFood() {
     setFoodY(newFoodY);
   };
 
-  const food = () => {
-    if (foodX !== null && foodY !== null) {
-      return (
-        <div
-          style={{ gridArea: `${foodY} / ${foodX}`, backgroundColor: "red" }}
-        ></div>
-      );
-    }
-    return null;
-  };
-
-  return { food, foodPositionRandom, foodX, foodY };
+  return { foodPositionRandom, foodX, foodY };
 }

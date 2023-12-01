@@ -1,11 +1,13 @@
 "use client";
 import styles from "./ContainerSnake.module.css";
 import { useEffect } from "react";
-import useFood from "./useFood";
-import useSnake from "./useSnake";
+import useFood from "../Food/useFood";
+import useSnake from "../Snake/useSnake";
+import Food from "../Food/Food";
+import Snake from "../Snake/Snake";
 export default function ContainerSnake() {
-  const { food, foodPositionRandom, foodX, foodY } = useFood();
-  const { snake, snakeMobility, moveSnake, snakeX, snakeY } = useSnake();
+  const { foodPositionRandom, foodX, foodY } = useFood();
+  const { snakeMobility, moveSnake, snakeX, snakeY } = useSnake();
 
   if (foodX === snakeX && foodY === snakeY) {
     foodPositionRandom();
@@ -16,7 +18,7 @@ export default function ContainerSnake() {
   }, []);
 
   useEffect(() => {
-    const intervalId = setInterval(moveSnake, 125);
+    const intervalId = setInterval(moveSnake, 50);
     return () => clearInterval(intervalId);
   }, [moveSnake]);
 
@@ -26,8 +28,8 @@ export default function ContainerSnake() {
       onKeyDown={snakeMobility}
       tabIndex={0}
     >
-      {food()}
-      {snake()}
+      <Food foodX={foodX} foodY={foodY} />
+      <Snake snakeX={snakeX} snakeY={snakeY} />
     </section>
   );
 }
